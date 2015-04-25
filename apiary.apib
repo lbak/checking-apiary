@@ -1,40 +1,48 @@
 FORMAT: 1A
 
-# Notes API
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+# Advanced Attributes API
 
 # Group Notes
-Notes related resources of the **Notes API**
 
-## Note [/publish/publishing/{publishingId}/notes]
-    
-    + Attributes (object)
-      + id: ioqwe909wwqm9DD (string)
-      + message: functional test note (string)
-      + created: (object)
+## Note [/publish/publishing/{publishingId}/notes/{noteId}]
+
++ Parameters
+    + noteId (string)
+
++ Attributes (object)
+    + message: some messsage (string)
+    + created
         + authorId: me (string)
-        + date: 2015-04-19T09:28:07.984Z (string) - time stamp
-    
-### List all Publishing Notes [GET]
+
+### Retrieve a Coupon [GET]
+Retrieves the coupon with the given ID.
+
 + Response 200 (application/json)
+    + Attributes (Note)
 
-    + Attributes (array[Note])
+## Coupons [/coupons{?limit}]
 
-### Create a Publishing Note [POST]
++ Attributes (array[Note])
+
+### List all Coupons [GET]
+Returns a list of your coupons.
+
++ Parameters
+    + limit (number, optional)
+
+        A limit on the number of objects to be returned. Limit can range between 1 and 100 items.
+
++ Response 200 (application/json)
+    + Attributes (Coupons)
+
+### Create a Coupon [POST]
+Creates a new Coupon.
+
++ Attributes (object)
+    + percent_off: 25 (number)
+    + redeem_by (number)
+
 + Request (application/json)
 
-        {
-           "message": "some message"                    // required
-        }
-
-+ Response 201 (application/json)
-
-        {
-            "id": "ASD9ASD989873A898ADS",
-            "message": "functional test note"              
-        }
-
-## Publishing Note [/publish/publishing/{publishingId}/notes/{id}]
-
-### Remove a Publishing Note [DELETE]
-+ Response 204
++ Response 200 (application/json)
+    + Attributes (Note)
