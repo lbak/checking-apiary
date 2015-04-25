@@ -6,12 +6,27 @@ Notes API is a *short texts saving* service similar to its physical paper presen
 # Group Notes
 Notes related resources of the **Notes API**
 
+## Note [/publish/publishing/{publishingId}/notes/{id}]
+
++ Parameters
+    + id (string, required)
+    
++ Attributes
+    + id: ASD9ASD989873A898ADS (string, required)
+    + message: functional test note (string, required)
+    + authorId: 11223ASD (string, required)
+    + date: `2015-04-19T09:28:07.984Z` (string, required) - format: yyyy-MM-ddThh:mm:ss[.sss]
+
+### Remove a Publishing Note [DELETE]
++ Response 204
+
 ## Publishing Notes Collection [/publish/publishing/{publishingId}/notes]
 ### List all Publishing Notes [GET]
+
 + Response 200 (application/json)
 
         [{
-             "id": "",
+             "id": "ASD9ASD989873A898ADS",
              "message": "functional test note",
              "created": {
                  "authorId": "",
@@ -32,7 +47,3 @@ Notes related resources of the **Notes API**
             "id": "ASD9ASD989873A898ADS",
             "message": "some message"              
         }
-
-## Remove [/publish/publishing/{publishingId}/notes/{id}]
-### Remove a Publishing Note [DELETE]
-+ Response 204
