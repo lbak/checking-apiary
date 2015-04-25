@@ -6,18 +6,19 @@ Notes API is a *short texts saving* service similar to its physical paper presen
 # Group Notes
 Notes related resources of the **Notes API**
 
-## Publishing Notes Collection [/publish/publishing/{publishingId}/notes]
+## Notes [/publish/publishing/{publishingId}/notes]
+    
+    + Attributes (object)
+      + id: ioqwe909wwqm9DD (string)
+      + message: functional test note (string)
+      + created: (object)
+        + authorId: me (string)
+        + date: 2015-04-19T09:28:07.984Z (string) - time stamp
+    
 ### List all Publishing Notes [GET]
 + Response 200 (application/json)
 
-        [{
-             "id": "",
-             "message": "functional test note",
-             "created": {
-                 "authorId": "",
-                 "date": "2015-04-19T09:28:07.984Z"
-             }   
-        }]
+        + Attributes (array[Notes])
 
 ### Create a Publishing Note [POST]
 + Request (application/json)
