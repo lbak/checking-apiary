@@ -29,6 +29,12 @@ Notes resources
 ## Notes [/publish/publishing/{publishingId}/notes]
 ### List all Publishing Notes [GET]
 
++ Request (application/json)
+    
+    + Headers
+            
+            X-Falcon-Session: sessionId
+
 + Response 200 (application/json)
 
         [{
@@ -46,6 +52,10 @@ Notes resources
     + message: some message (string, required)
 
 + Request (application/json)
+    
+    + Headers
+            
+            X-Falcon-Session: sessionId
 
 + Response 201 (application/json)
 
