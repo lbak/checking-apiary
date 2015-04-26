@@ -17,9 +17,16 @@ Notes resources
     + date: `2015-04-19T09:28:07.984Z` (string, required) - format: yyyy-MM-ddThh:mm:ss[.sss]Z
 
 ### Remove a Publishing Note [DELETE]
+
++ Request (application/json)
+    
+    + Headers
+            
+            X-Falcon-Session: sessionId
+
 + Response 204
 
-## Publishing Notes Collection [/publish/publishing/{publishingId}/notes]
+## Notes [/publish/publishing/{publishingId}/notes]
 ### List all Publishing Notes [GET]
 
 + Response 200 (application/json)
